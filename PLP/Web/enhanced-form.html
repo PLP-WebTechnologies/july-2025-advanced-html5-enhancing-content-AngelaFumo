@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Enhanced Form Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.6;
+    }
+    header, section, footer {
+      margin-bottom: 20px;
+    }
+    form {
+      max-width: 600px;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    fieldset {
+      margin-bottom: 15px;
+      border: 1px solid #aaa;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    legend {
+      font-weight: bold;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 6px;
+      margin-top: 5px;
+      box-sizing: border-box;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    table, th, td {
+      border: 1px solid #888;
+    }
+    th, td {
+      padding: 8px;
+      text-align: left;
+    }
+    ul {
+      list-style-type: square;
+      padding-left: 20px;
+    }
+    footer {
+      font-size: 0.9em;
+      text-align: center;
+      color: #555;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Enhanced Registration Form</h1>
+    <p>This page demonstrates a well-structured HTML5 form with lists, tables, and media.</p>
+  </header>
+
+  <section>
+    <h2>Why register?</h2>
+    <ul>
+      <li>Access exclusive content</li>
+      <li>Receive personalized updates</li>
+      <li>Join our community events</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Membership Plans</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Plan</th>
+          <th>Features</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Basic</td>
+          <td>Access to articles</td>
+          <td>Free</td>
+        </tr>
+        <tr>
+          <td>Premium</td>
+          <td>Articles + Community + Events</td>
+          <td>$9.99/month</td>
+        </tr>
+        <tr>
+          <td>VIP</td>
+          <td>All Premium features + 1:1 Mentorship</td>
+          <td>$29.99/month</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Intro Video</h2>
+    <video controls width="400">
+      <source src="sample.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <section>
+    <h2>Registration Form</h2>
+    <form action="#" method="post" autocomplete="on">
+      
+      <fieldset>
+        <legend>Personal Information</legend>
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+        
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="+1234567890" pattern="\\+?[0-9]{7,15}" required>
+        
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+      </fieldset>
+
+      <fieldset>
+        <legend>Account Details</legend>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Choose a username" required minlength="4" maxlength="20">
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter a strong password" required minlength="6">
+
+        <label for="confirm">Confirm Password:</label>
+        <input type="password" id="confirm" name="confirm" placeholder="Re-enter your password" required>
+
+        <label for="readonlyid">User ID (readonly):</label>
+        <input type="text" id="readonlyid" name="readonlyid" value="AUTO12345" readonly>
+      </fieldset>
+
+      <fieldset>
+        <legend>Preferences</legend>
+        <label for="plan">Choose Plan:</label>
+        <select id="plan" name="plan" required>
+          <option value="">--Select--</option>
+          <option value="basic">Basic</option>
+          <option value="premium">Premium</option>
+          <option value="vip">VIP</option>
+        </select>
+
+        <label>Newsletter Subscription:</label>
+        <input type="radio" id="yes" name="newsletter" value="yes" required> <label for="yes">Yes</label>
+        <input type="radio" id="no" name="newsletter" value="no"> <label for="no">No</label>
+
+        <label for="interests">Areas of Interest:</label>
+        <input type="checkbox" name="interests" value="tech"> Tech
+        <input type="checkbox" name="interests" value="business"> Business
+        <input type="checkbox" name="interests" value="health"> Health
+      </fieldset>
+
+      <fieldset>
+        <legend>Additional Information</legend>
+        <label for="about">Tell us about yourself:</label>
+        <textarea id="about" name="about" rows="4" placeholder="Write something about yourself..."></textarea>
+
+        <label for="file">Upload Profile Picture:</label>
+        <input type="file" id="file" name="file" accept="image/*">
+      </fieldset>
+
+      <button type="submit">Register</button>
+      <button type="reset">Clear</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Enhanced Form Demo. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
